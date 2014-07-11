@@ -1,6 +1,5 @@
 <?php 
 
-// Documents/Measurement.php
 namespace App\Documents;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;

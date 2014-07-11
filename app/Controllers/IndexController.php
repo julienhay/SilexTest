@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controllers;
 
 use Silex\Application;
 use Silex\ControllerProviderInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
+
 use App\Documents\Measurement;
 
 class IndexController implements ControllerProviderInterface
@@ -34,8 +36,8 @@ class IndexController implements ControllerProviderInterface
     {
         // créer un nouveau controller basé sur la route par défaut
         $index = $app['controllers_factory'];
-        $index->match("", 'App\Controller\IndexController::index')->bind("index.index");
-        $index->match("/adddata", 'App\Controller\IndexController::adddata')->bind("index.add_data");
+        $index->match("", 'App\Controllers\IndexController::index')->bind("index.index");
+        $index->match("/adddata", 'App\Controllers\IndexController::adddata')->bind("index.add_data");
 
         return $index;
     }

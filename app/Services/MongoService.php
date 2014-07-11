@@ -17,7 +17,7 @@ class MongoService
 {
 	public $dm;
 
-    function __construct()
+    public function __construct()
     {
         /**
         * MONGO DB
