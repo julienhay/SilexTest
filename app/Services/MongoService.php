@@ -2,8 +2,7 @@
 
 namespace App\Services;
 
-use Silex\Provider,
-    Doctrine\Common\ClassLoader,
+use Doctrine\Common\ClassLoader,
     Doctrine\ODM\MongoDB\Configuration,
     Doctrine\Common\Annotations\AnnotationReader,
     Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver,
@@ -18,11 +17,11 @@ class MongoService
 {
 	public $dm;
 
-	function __construct()
-	{
-		/**
-         * MONGO DB
-         */
+    function __construct()
+    {
+        /**
+        * MONGO DB
+        */
         $config = new Configuration();
         $config->setProxyDir(__DIR__ . '/tmp/cache');
         $config->setProxyNamespace('Proxies');
@@ -31,7 +30,7 @@ class MongoService
         $config->setHydratorNamespace('Hydrators');
 
         $annotationDriver = $config->newDefaultAnnotationDriver(
-          array(__DIR__ . '/Documents')
+            array(__DIR__ . '/Documents')
         );
         $config->setMetadataDriverImpl($annotationDriver);
         AnnotationDriver::registerAnnotationClasses();
@@ -40,5 +39,5 @@ class MongoService
 
         $classLoader = new ClassLoader('Documents', __DIR__);
         $classLoader->register();
-	}
+    }
 }
