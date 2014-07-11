@@ -7,7 +7,7 @@ $config_bundle = require __DIR__ . '/../App/Config/ConfigBundle.php';
 
 $app = new App\SilexTestApplication(
 	[ 
-		'debug' => true,
+		'debug' => false,
 		'config_bundle' => $config_bundle
 	]
 );
