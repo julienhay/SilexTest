@@ -1,3 +1,4 @@
 /vendor/*
 /app/tmp/*
 /composer.phar
+.DS_Store
