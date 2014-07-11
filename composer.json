@@ -1,0 +1,9 @@
+{
+    "require": {
+        "silex/silex": "~1.2",
+        "symfony/twig-bridge":"dev-master",
+        "twig/twig":"dev-master",
+        "silex/web-profiler": "~1.0",
+        "doctrine/mongodb-odm": "1.0.*@dev"
+    }
+}
